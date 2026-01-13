@@ -1,186 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome Home ❤️</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Welcome Home ❤️ Reeth</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", sans-serif;
-    }
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
 
-    body {
-      min-height: 100vh;
-      background: linear-gradient(135deg, #ff8c42, #ffd56b);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 16px;
-    }
+/* 🌈 Background */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff8c42, #ffd56b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 16px;
+}
 
-    .card {
-      background: #fff;
-      border-radius: 24px;
-      max-width: 420px;
-      width: 100%;
-      box-shadow: 0 20px 45px rgba(0,0,0,0.25);
-      overflow: hidden;
-      text-align: center;
-    }
+/* 💌 Card */
+.card {
+  background: #fff;
+  border-radius: 24px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
 
-    .content {
-      padding: 22px;
-    }
+.content {
+  padding: 22px;
+}
 
-    h1 {
-      color: #d35400;
-      margin-bottom: 6px;
-      font-size: 1.8rem;
-    }
+/* 🧑‍🤝‍🧑 Personalized Greeting */
+h1 {
+  color: #d35400;
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
 
-    .pongal {
-      font-size: 1.2rem;
-      color: #e67e22;
-      margin-bottom: 14px;
-    }
+.name {
+  color: #c0392b;
+  font-weight: bold;
+}
 
-    p {
-      color: #555;
-      font-size: 1rem;
-      line-height: 1.5;
-      margin-bottom: 16px;
-    }
+/* 🌾 Pongal text */
+.pongal {
+  font-size: 1.2rem;
+  color: #e67e22;
+  margin-bottom: 12px;
+}
 
-    /* ❤️ Heart Image Container */
-    .heart-container {
-      width: 220px;
-      height: 200px;
-      margin: 0 auto 18px;
-      position: relative;
-    }
+/* ❤️ Heart Image */
+.heart-container {
+  width: 200px;
+  height: 180px;
+  margin: 0 auto 18px;
+  position: relative;
+}
 
-    /* .heart {
-      width: 100%;
-      height: 100%;
-      background: red;
-      position: relative;
-      transform: rotate(-45deg);
-      border-radius: 12px;
-      overflow: hidden;
-    }
+.heart {
+  width: 100%;
+  height: 100%;
+  background: #e74c3c;
+  transform: rotate(-45deg);
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
 
-    .heart::before,
-    .heart::after {
-      content: "";
-      width: 100%;
-      height: 100%;
-      background: red;
-      border-radius: 50%;
-      position: absolute;
-    }
+.heart::before,
+.heart::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #e74c3c;
+  border-radius: 50%;
+  position: absolute;
+}
 
-    .heart::before {
-      top: -50%;
-      left: 0;
-    }
+.heart::before {
+  top: -50%;
+  left: 0;
+}
 
-    .heart::after {
-      left: 50%;
-      top: 0;
-    }
+.heart::after {
+  left: 50%;
+  top: 0;
+}
 
-    .heart img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transform: rotate(45deg) scale(1.1);
-    } */
+.heart img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotate(45deg) scale(1.1);
+}
 
-    /* 🎥 Responsive YouTube Video */
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
-      height: 0;
-      margin-top: 12px;
-      border-radius: 16px;
-      overflow: hidden;
-    }
+/* 🔥 Pongal Pot */
+.pongal-pot {
+  margin: 10px auto 16px;
+  position: relative;
+  width: 120px;
+}
 
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+.pot {
+  width: 120px;
+  height: 80px;
+  background: #8e44ad;
+  border-radius: 0 0 60px 60px;
+}
 
-    footer {
-      margin-top: 14px;
-      font-size: 0.8rem;
-      color: #999;
-    }
+.pot::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 120px;
+  height: 20px;
+  background: #663399;
+  border-radius: 50%;
+}
 
-    /* 📱 Mobile tweaks */
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.6rem;
-      }
-      .heart-container {
-        width: 190px;
-        height: 170px;
-      }
-    }
-  </style>
+/* 🔥 Pongal boiling */
+.fire {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 26px;
+  animation: boil 1s infinite alternate;
+}
+
+@keyframes boil {
+  from { transform: translateX(-50%) scale(1); }
+  to { transform: translateX(-50%) scale(1.2); }
+}
+
+/* 🌾 Sugarcane */
+.sugarcane {
+  position: absolute;
+  width: 6px;
+  height: 90px;
+  background: green;
+  top: -70px;
+}
+
+.left {
+  left: -10px;
+  transform: rotate(-15deg);
+}
+
+.right {
+  right: -10px;
+  transform: rotate(15deg);
+}
+
+/* 🎥 YouTube */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ✨ Floating Hearts */
+.heart-float {
+  position: fixed;
+  bottom: -20px;
+  font-size: 20px;
+  animation: floatUp 6s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(-110vh) scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 480px) {
+  h1 { font-size: 1.5rem; }
+  .heart-container {
+    width: 180px;
+    height: 160px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="card">
-    <div class="content">
-      <h1>Welcome Home ❤️ Reeth</h1>
+<!-- ✨ Floating hearts -->
+<script>
+for (let i = 0; i < 15; i++) {
+  const h = document.createElement("div");
+  h.className = "heart-float";
+  h.innerHTML = "❤️";
+  h.style.left = Math.random() * 100 + "vw";
+  h.style.animationDelay = Math.random() * 6 + "s";
+  document.body.appendChild(h);
+}
+</script>
 
-      <div class="pongal">
-        🌾 இனிய பொங்கல் நல்வாழ்த்துகள் 🌾
+<div class="card">
+  <div class="content">
+
+    <!-- 🧑‍🤝‍🧑 Change the name here -->
+    <h1>Welcome Home, <span class="name">My Love</span> ❤️</h1>
+
+    <div class="pongal">🌾 இனிய பொங்கல் நல்வாழ்த்துகள் 🌾</div>
+
+    <!-- ❤️ Photo -->
+    <div class="heart-container">
+      <div class="heart">
+        <img src="rbr.jpeg" alt="Love">
       </div>
-
-      <!-- ❤️ HEART IMAGE -->
-      <!-- Replace photo.jpg with your phone picture later -->
-      <div class="heart-container">
-        <div class="heart">
-          <img src="rbr.jpeg" alt="My Love">
-        </div>
-      </div>
-
-      <p>
-        Home feels warmer with you here.  
-        This Pongal, may love, peace, and happiness overflow like sweet Pongal.
-      </p>
-
-      <!-- 🎵 YOUTUBE EMBED -->
-      <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/klYjftRy5Xw?autoplay=1&mute=1&loop=1&playlist=klYjftRy5Xw"
-          title="Pongal Love Song"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
-      </div>
-
-      <footer>
-        Made with ❤️ just for Reeth Nalamitha
-      </footer>
     </div>
+
+    <!-- 🔥 Pongal pot -->
+    <div class="pongal-pot">
+      <div class="fire">🔥</div>
+      <div class="sugarcane left"></div>
+      <div class="sugarcane right"></div>
+      <div class="pot"></div>
+    </div>
+
+    <p>
+      May our home overflow with happiness, love, and warmth  
+      just like sweet Pongal today.
+    </p>
+
+    <!-- 🎵 YouTube -->
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/klYjftRy5Xw?autoplay=1&mute=1&loop=1&playlist=klYjftRy5Xw"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
   </div>
+</div>
 
 </body>
 </html>
