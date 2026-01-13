@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome Home ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff9a3c, #ffd56b);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    h1 {
+      color: #d35400;
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+    }
+
+    p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .pongal {
+      font-size: 1.2rem;
+      color: #e67e22;
+      margin-bottom: 14px;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    footer {
+      font-size: 0.8rem;
+      color: #999;
+      margin-top: 12px;
+    }
+
+    /* Mobile optimization */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="hero">
+      <!-- 🔁 Replace image.jpg with your custom picture -->
+      <img src="image.jpg" alt="Welcome Home">
+    </div>
+
+    <div class="content">
+      <h1>Welcome Home ❤️</h1>
+
+      <div class="pongal">
+        🌾 இனிய பொங்கல் நல்வாழ்த்துகள் 🌾
+      </div>
+
+      <p>
+        Home feels complete with you here.  
+        May this Pongal bring love, warmth, and endless smiles into our lives.
+      </p>
+
+      <!-- 🎵 Replace pongal-love-song.mp3 with your song -->
+      <audio controls autoplay loop>
+        <source src="pongal-love-song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <footer>
+        Made with ❤️ for you
+      </footer>
+    </div>
+  </div>
+
+</body>
+</html>
